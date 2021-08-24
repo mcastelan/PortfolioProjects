@@ -1,0 +1,655 @@
+{
+	"meta": {
+		"chronografVersion": "1.8.4",
+		"sources": {
+			"1": {
+				"name": "InfluxDataBase",
+				"link": "/chronograf/v1/sources/1"
+			}
+		}
+	},
+	"dashboard": {
+		"id": "6",
+		"cells": [
+			{
+				"i": "677b5c90-e3da-46ff-946d-3457be007d09",
+				"x": 3,
+				"y": 5,
+				"w": 3,
+				"h": 4,
+				"name": "Furnace 2",
+				"queries": [
+					{
+						"query": "SELECT \"data_0\" AS \"mean_data_0\" FROM \"telegraf\".\"autogen\".\"mqtt_consumer\" WHERE time > :dashboardTime: AND time < :upperDashboardTime: AND \"topic\"='Furnace2'",
+						"queryConfig": {
+							"database": "telegraf",
+							"measurement": "mqtt_consumer",
+							"retentionPolicy": "autogen",
+							"fields": [
+								{
+									"value": "data_0",
+									"type": "field",
+									"alias": "mean_data_0"
+								}
+							],
+							"tags": {
+								"topic": [
+									"Furnace2"
+								]
+							},
+							"groupBy": {
+								"time": "",
+								"tags": []
+							},
+							"areTagsAccepted": true,
+							"rawText": null,
+							"range": null,
+							"shifts": null
+						},
+						"source": "",
+						"type": "influxql"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": " °C",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "gauge",
+				"colors": [
+					{
+						"id": "0",
+						"type": "min",
+						"hex": "#00C9FF",
+						"name": "laser",
+						"value": "1000"
+					},
+					{
+						"id": "120516d3-6051-454d-850f-2d478e155641",
+						"type": "threshold",
+						"hex": "#F95F53",
+						"name": "curacao",
+						"value": "2000"
+					},
+					{
+						"id": "1",
+						"type": "max",
+						"hex": "#9394FF",
+						"name": "comet",
+						"value": "3000"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": false,
+					"digits": 2
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/6/cells/677b5c90-e3da-46ff-946d-3457be007d09"
+				}
+			},
+			{
+				"i": "59318dfe-a5bb-4d2b-8b41-976ecfb1d0a1",
+				"x": 0,
+				"y": 5,
+				"w": 3,
+				"h": 4,
+				"name": "Furnace 1",
+				"queries": [
+					{
+						"query": "SELECT \"data_0\" AS \"Furnace 1\" FROM \"telegraf\".\"autogen\".\"mqtt_consumer\" WHERE time > :dashboardTime: AND time < :upperDashboardTime: AND \"topic\"='Furnace1' ",
+						"queryConfig": {
+							"database": "telegraf",
+							"measurement": "mqtt_consumer",
+							"retentionPolicy": "autogen",
+							"fields": [
+								{
+									"value": "data_0",
+									"type": "field",
+									"alias": "Furnace 1"
+								}
+							],
+							"tags": {
+								"topic": [
+									"Furnace1"
+								]
+							},
+							"groupBy": {
+								"time": "",
+								"tags": []
+							},
+							"areTagsAccepted": true,
+							"rawText": null,
+							"range": null,
+							"shifts": null
+						},
+						"source": "",
+						"type": "influxql"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": " °C",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "gauge",
+				"colors": [
+					{
+						"id": "0",
+						"type": "min",
+						"hex": "#00C9FF",
+						"name": "laser",
+						"value": "1000"
+					},
+					{
+						"id": "9bd486aa-fb86-42e7-bb90-ec1cc6b1619c",
+						"type": "threshold",
+						"hex": "#FFD255",
+						"name": "thunder",
+						"value": "2500"
+					},
+					{
+						"id": "1",
+						"type": "max",
+						"hex": "#9394FF",
+						"name": "comet",
+						"value": "3000"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": false,
+					"digits": 2
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/6/cells/59318dfe-a5bb-4d2b-8b41-976ecfb1d0a1"
+				}
+			},
+			{
+				"i": "9f88c424-9cdf-4ce9-a779-62bd30b568da",
+				"x": 0,
+				"y": 0,
+				"w": 12,
+				"h": 5,
+				"name": "Furnaces Temperature",
+				"queries": [
+					{
+						"query": "SELECT mean(\"data_0\") AS \"mean_data_0\" FROM \"telegraf\".\"autogen\".\"mqtt_consumer\" WHERE time > :dashboardTime: AND time < :upperDashboardTime: AND (\"topic\"='Furnace1' OR \"topic\"='Furnace2') GROUP BY time(:interval:), \"topic\" FILL(null)",
+						"queryConfig": {
+							"database": "telegraf",
+							"measurement": "mqtt_consumer",
+							"retentionPolicy": "autogen",
+							"fields": [
+								{
+									"value": "mean",
+									"type": "func",
+									"alias": "mean_data_0",
+									"args": [
+										{
+											"value": "data_0",
+											"type": "field",
+											"alias": ""
+										}
+									]
+								}
+							],
+							"tags": {
+								"topic": [
+									"Furnace1",
+									"Furnace2"
+								]
+							},
+							"groupBy": {
+								"time": "auto",
+								"tags": [
+									"topic"
+								]
+							},
+							"areTagsAccepted": true,
+							"fill": "null",
+							"rawText": null,
+							"range": null,
+							"shifts": null
+						},
+						"source": "",
+						"type": "influxql"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "Temperatures °C",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "line",
+				"colors": [
+					{
+						"id": "9afb7b26-567d-4189-be99-f29757cb71b3",
+						"type": "scale",
+						"hex": "#31C0F6",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "6dd87d70-2bf8-42fd-a0a0-bc8ff7027553",
+						"type": "scale",
+						"hex": "#A500A5",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					},
+					{
+						"id": "0ef14350-4042-44b6-b708-2a37f54f7369",
+						"type": "scale",
+						"hex": "#FF7E27",
+						"name": "Nineteen Eighty Four",
+						"value": "0"
+					}
+				],
+				"legend": {
+					"type": "static",
+					"orientation": "bottom"
+				},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 2
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/6/cells/9f88c424-9cdf-4ce9-a779-62bd30b568da"
+				}
+			},
+			{
+				"i": "a9e6bce7-fdc0-47f2-95bd-1f6addd33e25",
+				"x": 6,
+				"y": 5,
+				"w": 3,
+				"h": 4,
+				"name": "Furnace 1 Temperatures",
+				"queries": [
+					{
+						"query": "SELECT \"data_0\" AS \"Temperature\" FROM \"telegraf\".\"autogen\".\"mqtt_consumer\" WHERE time > :dashboardTime: AND time < :upperDashboardTime: AND \"topic\"='Furnace1'",
+						"queryConfig": {
+							"database": "telegraf",
+							"measurement": "mqtt_consumer",
+							"retentionPolicy": "autogen",
+							"fields": [
+								{
+									"value": "data_0",
+									"type": "field",
+									"alias": "Temperature"
+								}
+							],
+							"tags": {
+								"topic": [
+									"Furnace1"
+								]
+							},
+							"groupBy": {
+								"time": "",
+								"tags": []
+							},
+							"areTagsAccepted": true,
+							"rawText": null,
+							"range": null,
+							"shifts": null
+						},
+						"source": "",
+						"type": "influxql"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "table",
+				"colors": [
+					{
+						"id": "base",
+						"type": "text",
+						"hex": "#00C9FF",
+						"name": "laser",
+						"value": "-1000000000000000000"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					{
+						"internalName": "mqtt_consumer. Temperature",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 2
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/6/cells/a9e6bce7-fdc0-47f2-95bd-1f6addd33e25"
+				}
+			},
+			{
+				"i": "389c999e-32fe-4b46-bbad-54cb558ef91c",
+				"x": 9,
+				"y": 5,
+				"w": 3,
+				"h": 4,
+				"name": "Furnace 2 Temperature",
+				"queries": [
+					{
+						"query": "SELECT \"data_0\" AS \"Temperature\" FROM \"telegraf\".\"autogen\".\"mqtt_consumer\" WHERE time > :dashboardTime: AND time < :upperDashboardTime: AND \"topic\"='Furnace2' ",
+						"queryConfig": {
+							"database": "telegraf",
+							"measurement": "mqtt_consumer",
+							"retentionPolicy": "autogen",
+							"fields": [
+								{
+									"value": "data_0",
+									"type": "field",
+									"alias": "Temperature"
+								}
+							],
+							"tags": {
+								"topic": [
+									"Furnace2"
+								]
+							},
+							"groupBy": {
+								"time": "",
+								"tags": []
+							},
+							"areTagsAccepted": true,
+							"rawText": null,
+							"range": null,
+							"shifts": null
+						},
+						"source": "",
+						"type": "influxql"
+					}
+				],
+				"axes": {
+					"x": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					},
+					"y2": {
+						"bounds": [
+							"",
+							""
+						],
+						"label": "",
+						"prefix": "",
+						"suffix": "",
+						"base": "10",
+						"scale": "linear"
+					}
+				},
+				"type": "table",
+				"colors": [
+					{
+						"id": "base",
+						"type": "text",
+						"hex": "#00C9FF",
+						"name": "laser",
+						"value": "-1000000000000000000"
+					}
+				],
+				"legend": {},
+				"tableOptions": {
+					"verticalTimeAxis": true,
+					"sortBy": {
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					"wrapping": "truncate",
+					"fixFirstColumn": true
+				},
+				"fieldOptions": [
+					{
+						"internalName": "time",
+						"displayName": "",
+						"visible": true
+					},
+					{
+						"internalName": "mqtt_consumer.Temperature",
+						"displayName": "",
+						"visible": true
+					}
+				],
+				"timeFormat": "MM/DD/YYYY HH:mm:ss",
+				"decimalPlaces": {
+					"isEnforced": true,
+					"digits": 2
+				},
+				"note": "",
+				"noteVisibility": "default",
+				"links": {
+					"self": "/chronograf/v1/dashboards/6/cells/389c999e-32fe-4b46-bbad-54cb558ef91c"
+				}
+			}
+		],
+		"templates": [],
+		"name": "Furnaces",
+		"organization": "default",
+		"links": {
+			"self": "/chronograf/v1/dashboards/6",
+			"cells": "/chronograf/v1/dashboards/6/cells",
+			"templates": "/chronograf/v1/dashboards/6/templates"
+		}
+	}
+}
